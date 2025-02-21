@@ -16,6 +16,7 @@
     "128": "img/reddit-hot-redirect-logo.png"
   },
   "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "img/reddit-hot-redirect-logo.png",
       "48": "img/reddit-hot-redirect-logo.png",
@@ -30,5 +31,16 @@
         "path": "rules.json"
       }
     ]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.reddit.com/r/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
 }
