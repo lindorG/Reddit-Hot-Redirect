@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.reddit.com/r/\\1/hot/"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://www\\.reddit\\.com/r/([^/]+)(/)?$",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.reddit.com/r/\\1/hot/"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://www\\.reddit\\.com/r/([^/]+)/best/?$",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
