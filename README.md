@@ -1,33 +1,39 @@
 # Reddit Hot Redirect
 
+![Reddit Hot Redirect Logo](img/reddit-hot-redirect-logo.png)
+
 ## Overview
-Reddit Hot Redirect is a Chrome extension that automatically redirects Reddit subreddits from the default "Best" sorting to "Hot". This ensures that users always see the latest trending posts instead of older, top-ranked content.
+Reddit recently changed its default sorting behavior, directing users to the 'Best' sorting method instead of 'Hot'. This creates an issue where older, highly upvoted posts remain at the top for extended periods, making it difficult to discover newly trending content. The 'Hot' sorting method is better suited for seeing fresh discussions as they gain traction in real time.
+
+Reddit Hot Redirect is a Chrome extension that automatically redirects subreddit pages from 'Best' to 'Hot', ensuring that you always see the most relevant and up-to-date posts without having to manually adjust the sorting every time you visit a subreddit.
 
 ## Features
-- Automatically redirects subreddit pages from `Best` to `Hot`
-- Preserves user-selected sorting (e.g., New, Top)
-- Does not affect `old.reddit.com`
-- Runs efficiently in the background
+- Redirects subreddit pages from `Best` to `Hot`, ensuring fresher content.
+- Works automatically without user intervention.
+- Lightweight and privacy-focused.
 
 ## Installation
-1. Download the extension files.
-2. Open Chrome and go to `chrome://extensions/`.
-3. Enable **Developer mode** (toggle in the top right corner).
+1. Download or clone this repository.
+2. Go to `chrome://extensions/` in your browser.
+3. Enable **Developer mode** (toggle in the top right).
 4. Click **Load unpacked** and select the extension folder.
-5. The extension is now active!
 
-## Permissions
-This extension requires the following permissions:
-- `webRequest` & `webRequestBlocking`: To intercept and redirect Reddit URLs.
-- `declarativeNetRequest`: To modify network requests for URL redirection.
-- `tabs`: To check and modify Reddit URLs.
-- `host_permissions`: To access subreddit pages on `www.reddit.com`.
+## Permissions Used
+- **declarativeNetRequest**: Used to modify network requests and redirect Reddit pages.
+- **tabs**: Required for handling tab-based interactions.
+- **host permissions** (`https://www.reddit.com/r/*`): Allows the extension to operate specifically on subreddit pages.
 
-## Privacy
-This extension does **not** collect, store, or share any personal data. See the [Privacy Policy](./PRIVACY.md) for more details.
+## How It Works
+- If you visit `https://www.reddit.com/r/[subreddit]/`, the extension will redirect you to `https://www.reddit.com/r/[subreddit]/hot/`.
+- If you visit `https://www.reddit.com/r/[subreddit]/best/`, it will also redirect to `/hot/`.
+- **Old Reddit (`old.reddit.com`) is unaffected.**
+
+## Security & Privacy
+- This extension does **not** collect, store, or share any data.
+- All redirections happen locally in your browser.
+
+## Contribution
+Feel free to submit issues or pull requests for improvements!
 
 ## License
-This project is licensed under the MIT License.
-
-## Contact
-For questions or feedback, please contact the developer via the Chrome Web Store listing.
+MIT License.
