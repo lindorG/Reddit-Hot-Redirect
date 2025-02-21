@@ -1,6 +1,9 @@
 # Reddit Hot Redirect
 
-![Reddit Hot Redirect Logo](img/reddit-hot-redirect-logo.png)
+<p align="center">
+  <img src="img/reddit-hot-redirect-logo-128x128.png" alt="Reddit Hot Redirect Logo">
+</p>
+
 
 ## Overview
 Reddit recently changed its default sorting behavior, directing users to the 'Best' sorting method instead of 'Hot'. This creates an issue where older, highly upvoted posts remain at the top for extended periods, making it difficult to discover newly trending content. The 'Hot' sorting method is better suited for seeing fresh discussions as they gain traction in real time.
